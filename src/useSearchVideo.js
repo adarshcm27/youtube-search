@@ -15,23 +15,22 @@ export default function useSearchVideos(search,nextPage){
     useEffect(() => {
         
         const fetchData = async () => {
-        //const url = 'https://www.googleapis.com/youtube/v3/search';  
-        const url = 'http://localhost:3005/search';  
-        const result = await axios.get(url,{
-            params : {
-            part:'snippet',
-            maxResults:5,
-            key: process.env.REACT_APP_YOUTUBE_API_KEY,
-            q: search,
-            pageToken:nextPage
-            },
-        });
-      
-         setData(data => [...data, ...result.data.items])       
-         setPage(result.data.nextPageToken);      
-         setLoading(false);  
+            const url = 'https://www.googleapis.com/youtube/v3/search';  
+            const result = await axios.get(url,{
+                params : {
+                part:'snippet',
+                maxResults:5,
+                key: process.env.REACT_APP_YOUTUBE_API_KEY,
+                q: search,
+                pageToken:nextPage
+                },
+            });
+        
+            setData(data => [...data, ...result.data.items])       
+            setPage(result.data.nextPageToken);      
+            setLoading(false);  
 
-    };
+        };
     
     fetchData().catch( e =>{
         setError(true);
