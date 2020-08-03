@@ -1,3 +1,10 @@
+Important steps to run the project
+In the project directory, you can run:
+
+1. npm install
+2. npm start ( Detail description you can find below )
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
