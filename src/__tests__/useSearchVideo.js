@@ -6,8 +6,8 @@ import { act } from "react-test-renderer";
 jest.mock('axios');
 
 describe('useSearchVideos', () => {
-    it('fetches successfully data from an API', async () => {
-        
+    it('fetches successfully data from an API', async () => {      
+
         await act(async () => {
             const data = {
                 "kind": "youtube#searchListResponse",
