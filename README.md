@@ -1,8 +1,13 @@
 Important steps to run the project
 In the project directory, you can run:
 
-1. npm install
-2. npm start ( Detail description you can find below )
+1. Create a new file .env.development.local and place under the project folder and put the below contents and save the file
+    REACT_APP_YOUTUBE_API_KEY="<your-api-key>"
+    GENERATE_SOURCEMAP = false
+  
+2. npm install
+3. npm start ( Detail description you can find below )
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
